@@ -23,7 +23,7 @@ export const TaskArea: FC = (): ReactElement => {
         async () => {
             //return an array of tasks
             return await sendApiRequest<ITaskApi[]>(
-                'http://localhost:5000/tasks',
+                'https://typescript-todo-api.onrender.com/tasks',
                 'GET',
             );
         }
@@ -32,7 +32,7 @@ export const TaskArea: FC = (): ReactElement => {
     // update task mutation
     const updateTaskMutation = useMutation(
         (data: IUpdateTask) => sendApiRequest(
-            'http://localhost:5000/tasks',
+            'https://typescript-todo-api.onrender.com/tasks',
             'PUT',
             data
         )

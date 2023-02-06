@@ -29,7 +29,7 @@ export const CreateTaskForm: FC = (): ReactElement => {
     const createTaskMutation = useMutation(
         (data: ICreateTask) =>
         sendApiRequest(
-            'http://localhost:5000/tasks',
+            'https://typescript-todo-api.onrender.com/tasks',
             'POST',
             data
         )
